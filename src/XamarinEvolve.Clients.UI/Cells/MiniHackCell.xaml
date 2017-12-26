@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+     xmlns:local="clr-namespace:XamarinEvolve.Clients.UI;assembly=XamarinEvolve.Clients.UI"
+    x:Class="XamarinEvolve.Clients.UI.MiniHackCell">
+    <StackLayout Spacing="0" HeightRequest="450">
+        <StackLayout.Padding>
+            <OnPlatform x:TypeArguments="Thickness" iOS="0" Android="0,4" WinPhone="0"/>
+        </StackLayout.Padding>
+        <local:CardView HeightRequest="450">
+            <Grid Padding="0" ColumnSpacing="0">
+                <!--Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </-->
+
+                <Image
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Aspect="Fill"
+                    WidthRequest="450"
+                    HeightRequest="450">
+                    <Image.Source>
+                        <UriImageSource Uri="{Binding BadgeUri}" 
+                            CacheValidity="3" 
+                            CachingEnabled="true"/>
+                    </Image.Source>
+                </Image>
+                
+
+                <!--StackLayout VerticalOptions="Center" Grid.Column="0" Spacing="0">
+                        <Label Text="Hack Completed!" IsVisible="{Binding IsCompleted}"  TextColor="{StaticResource Primary}"/>
+                    </-->
+          
+            </Grid>
+    	</local:CardView>
+    </StackLayout>
+</ContentView>
